@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Location.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet MKMapView* mapView;
+@property (strong, nonatomic) CLLocationManager* locationManager;
 @property (nonatomic, retain) CLLocation* initialLocation;
+@property (strong, nonatomic) Location* location;
 
 @end

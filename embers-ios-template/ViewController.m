@@ -17,7 +17,8 @@
 #import "MenuTableViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDictionary+Additions.h"
-
+#import "Location.h"
+#import "MapViewController.h"
 
 @interface ViewController (){
   //BouncePresentAnimationController *_bounceAnimationController;
@@ -31,6 +32,7 @@
   UIView *_helpView;
   UIImageView *_backgroundView;
   NSMutableDictionary *_cacheTimestamps;
+  Location *_location;
 }
 
 @end
@@ -195,6 +197,14 @@
       //[[CacheController sharedInstance] setCache:responseObject forKey:tmpCacheKey];
     }
     NSDictionary *result=[responseObject objectForKey:@"data"];
+    
+    _location=[[Location alloc]initWithAttributes:result];
+    
+    NSLog(@"HERE is the _location name: %@", _location.name);
+    NSLog(@"HERE is the _location latitude: %f", _location.latitude);
+    NSLog(@"HERE is the _location longitude: %f", _location.longitude);
+    
+    
     [[CacheController sharedInstance] setCache:responseObject forKey:@"menuItemDetailBackground"];
     _buttonsView=[[UIView alloc] initWithFrame:CGRectMake(20.0f, _runningY, 280.0f, 200.0f)];
     _buttonsView.alpha=0.2f;
@@ -559,6 +569,9 @@
     UINavigationController *navigationController = segue.destinationViewController;
     MenuListViewController *menuListTVC = (MenuListViewController * )navigationController.topViewController;
     menuListTVC.menus = _menus;
+  }else if ([segue.identifier isEqualToString:@"modalMapSegue"]){
+    MapViewController *destinationVC=segue.destinationViewController;
+    destinationVC.location=_location;
   }
 }
 

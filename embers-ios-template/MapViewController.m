@@ -34,6 +34,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+    NSLog(@"here is latitude: %f and longitude: %f", self.location.latitude, self.location.longitude);
+  
      _firstTime=YES;
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -125,13 +128,13 @@
 
   // -----------------
   
-  CGFloat latitude=MYLocationLatitude();
-  CGFloat longitude=MYLocationLongitude();
+  CGFloat latitude=self.location.latitude;
+  CGFloat longitude=self.location.longitude;
 
   _locationPoint = [[MKPointAnnotation alloc] init];
   _locationPoint.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
-  _locationPoint.title = EMBERSlocationName();
-  _locationPoint.subtitle = EMBERSlocationAddressShort();
+  _locationPoint.title = self.location.name;
+  _locationPoint.subtitle = self.location.street;
   [self.mapView addAnnotation:_locationPoint];
 
   //[self setMapAOCCenter];
@@ -150,8 +153,10 @@
   NSLog(@"launching in Google Maps");
   if ([[UIApplication sharedApplication] canOpenURL:
        [NSURL URLWithString:@"comgooglemaps://"]]) {
-    NSString *googleString=[NSString stringWithFormat:@"comgooglemaps://?center=%f,%fzoom=14&views=traffic", MYLocationLatitude(), MYLocationLongitude()];
-   // NSString *googleString=[NSString stringWithFormat:@"comgooglemaps://?saddr=%f,%f&daddr=%f,%fzoom=14&directionsmode=driving",  MYLocationLatitude(), MYLocationLongitude()];
+//    NSString *googleString=[NSString stringWithFormat:@"comgooglemaps://?center=%f,%fzoom=14&views=traffic", MYLocationLatitude(), MYLocationLongitude()];
+    NSString *googleString=[NSString stringWithFormat:@"comgooglemaps://?center=%f,%fzoom=14&views=traffic", self.location.latitude, self.location.longitude];
+
+    // NSString *googleString=[NSString stringWithFormat:@"comgooglemaps://?saddr=%f,%f&daddr=%f,%fzoom=14&directionsmode=driving",  MYLocationLatitude(), MYLocationLongitude()];
 
     [[UIApplication sharedApplication] openURL:
      
@@ -179,8 +184,8 @@
 {
   if(_showingDirections==NO){
   NSLog(@"sending directions here");
-  CGFloat latitude=MYLocationLatitude();
-  CGFloat longitude=MYLocationLongitude();
+  CGFloat latitude=self.location.latitude;
+  CGFloat longitude=self.location.longitude;
   
   MKPlacemark *destinationPlacemark=[[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(latitude, longitude) addressDictionary:nil];
   MKMapItem *destinationMapItem=[[MKMapItem alloc] initWithPlacemark:destinationPlacemark];

@@ -83,7 +83,7 @@
   }else{
 
   
-  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/locations/%@/mobile_home",EMBERSHost(),MYLocationID()]];
+  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/locations/%@/mobile_home",EMBERSHost(),EMBERSLocationID()]];
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   NSURLRequest *request = [NSURLRequest requestWithURL:URL];
   AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];

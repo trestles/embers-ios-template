@@ -67,7 +67,7 @@ BOOL MYLog(){
   //return NO;
 }
 
-NSString *MYLocationID() {
+NSString *EMBERSLocationID() {
   return @"48";  // AOC
   //return @"37";  // LUCQUES
 
@@ -91,14 +91,6 @@ NSString *EMBERSImageHost() {
   }
   return nil;
 }
-
-
-/*
-NSString *MYLocationId() {
-    //return @"21";
-    return @"37"; // <- lucques on atfoodie.com
-}
-*/
 
 BOOL MYShowBorders() {
   //return YES;

@@ -9,19 +9,20 @@
 #import <UIKit/UIKit.h>
 
 extern NSString* EMBERSnotificationToken();
+/*
 extern NSString* EMBERSlocationName();
 extern NSString* EMBERSlocationAddressShort();
 extern NSString* EMBERSlocationAddressCity();
-
+*/
 extern UIFont* EMBERSMapMiniViewFont();
 extern NSString* EMBERSnewsURL();
-extern NSString *MYLocationID();
+extern NSString *EMBERSLocationID();
 extern CGFloat MYLocationLatitude();
 extern CGFloat MYLocationLongitude();
 
 extern NSString *EMBERSHost();
 extern NSString *EMBERSImageHost();
-extern NSString *MYLocationId();
+extern NSString *EMBERSLocationId();
 extern BOOL MYShowBorders();
 extern BOOL MYLog();
 extern UIFont* MYMenuListFont(); // used in MenuListViewController

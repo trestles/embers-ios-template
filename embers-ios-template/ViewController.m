@@ -11,7 +11,7 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "MenuListViewController.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 #import "ButtonView.h"
 #import "CacheController.h"
 #import "MenuTableViewController.h"

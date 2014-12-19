@@ -9,7 +9,7 @@
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
 #import "MapViewController.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 //#import <QuartzCore/QuartzCore.h>
 
 @interface MapViewController (){

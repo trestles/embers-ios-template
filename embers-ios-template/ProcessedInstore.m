@@ -7,7 +7,7 @@
 //
 
 #import "ProcessedInstore.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 
 @implementation ProcessedInstore
 

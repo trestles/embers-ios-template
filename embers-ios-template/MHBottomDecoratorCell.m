@@ -7,7 +7,7 @@
 //
 
 #import "MHBottomDecoratorCell.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 
 @implementation MHBottomDecoratorCell
 

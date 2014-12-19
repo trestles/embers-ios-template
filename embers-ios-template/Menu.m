@@ -9,7 +9,7 @@
 #import "Menu.h"
 #import "menuHeader.h"
 #import "menuItem.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 
 @implementation Menu
 - (id)initWithAttributes:(NSDictionary *)attributes {

@@ -8,7 +8,7 @@
 
 #import "MenuHeaderView.h"
 #import "MenuHeader.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 
 @interface MenuHeaderView ()
 {

@@ -15,7 +15,7 @@
 #import "MenuItemView.h"
 #import "MenuHeaderView.h"
 #import "MIViewController.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 #import "CacheController.h"
 #import "AFNetworking.h"
 #import "MHBottomDecoratorCell.h"

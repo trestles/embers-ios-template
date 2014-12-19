@@ -8,8 +8,7 @@
 
 #import "NewsViewController.h"
 #import "MBProgressHUD.h"
-#import "MYUtility.h"
-
+#import "EMBERSConfig.h"
 
 @interface NewsViewController ()
 

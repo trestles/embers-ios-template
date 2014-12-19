@@ -12,9 +12,9 @@
 #import "Menu.h"
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 #import "CacheController.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 

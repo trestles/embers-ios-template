@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "CacheController.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 
 @interface ModelData(){
  

@@ -18,7 +18,7 @@
 
 
 #import "CacheController.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 
 static CacheController *sharedInstance = nil;
 

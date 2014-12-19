@@ -8,7 +8,7 @@
 
 #import "MenuHeaderCell.h"
 #import "Menuheader.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 
 @interface MenuHeaderCell(){
   CGFloat _mhTopPad;

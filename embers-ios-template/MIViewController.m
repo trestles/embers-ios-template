@@ -7,7 +7,7 @@
 //
 
 #import "MIViewController.h"
-#import "MYUtility.h"
+#import "EMBERSConfig.h"
 #import "MBProgressHUD.h"
 #import "AFNetworking.h"
 #import "TastingNote.h"

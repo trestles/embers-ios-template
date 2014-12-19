@@ -15,11 +15,12 @@
                     </view>
                     <connections>
                         <segue destination="yUm-qh-Ix9" kind="modal" identifier="modalMenuList" id="7ae-GB-ko5"/>
+                        <segue destination="beu-jI-sdj" kind="modal" identifier="modalMapSegue" id="tXp-PW-z41"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1057" y="51"/>
+            <point key="canvasLocation" x="-1077" y="15"/>
         </scene>
         <!--Menu List View Controller-->
         <scene sceneID="0Ig-Kf-cJZ">
@@ -166,6 +167,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ii-dT-Zij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1122" y="2"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="LqX-0h-Tyv">
+            <objects>
+                <viewController id="beu-jI-sdj" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6BX-yb-gz7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="59y-vT-gF4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91504824709999999" green="1" blue="0.77152713019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="59y-vT-gF4" id="VDr-Na-ip7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmZ-k2-nRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-701" y="-777"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

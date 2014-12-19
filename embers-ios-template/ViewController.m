@@ -28,6 +28,7 @@
   CGFloat _runningYButton;
   CGFloat _menuLeftOffset;
   CGFloat _bottomOfScreen;
+  CGFloat _buttonWidth;
   UIView *_buttonsView;
   UIView *_helpView;
   UIImageView *_backgroundView;
@@ -62,6 +63,10 @@
     _runningY = 280.0f;
     _bottomOfScreen=480.0f;
   }
+  
+  _buttonWidth=self.view.frame.size.width-60.0f;
+  _runningY=self.view.frame.size.height-240;
+  
 }
 
 -(void)processMenuItemBackgroundImage:(NSString *)mobileMenuItemDetail
@@ -204,9 +209,17 @@
     NSLog(@"HERE is the _location latitude: %f", _location.latitude);
     NSLog(@"HERE is the _location longitude: %f", _location.longitude);
     
+    /*
+    _buttonsView.layer.borderColor=[UIColor orangeColor].CGColor;
+    _buttonsView.layer.borderWidth=2.0f;
+    */
+    //[_buttonsView setBackgroundColor:[UIColor yellowColor]];
     
     [[CacheController sharedInstance] setCache:responseObject forKey:@"menuItemDetailBackground"];
-    _buttonsView=[[UIView alloc] initWithFrame:CGRectMake(20.0f, _runningY, 280.0f, 200.0f)];
+    //_buttonsView=[[UIView alloc] initWithFrame:CGRectMake(20.0f, _runningY, 280.0f, 200.0f)];
+    CGFloat buttonViewWidth=self.view.frame.size.width-40.0f;
+    _buttonsView=[[UIView alloc] initWithFrame:CGRectMake(20.0f, _runningY, buttonViewWidth, 200.0f)];
+
     _buttonsView.alpha=0.2f;
     [self.view addSubview:_buttonsView];
     [self showButtonsViewInSeconds];
@@ -308,6 +321,12 @@
                       options: UIViewAnimationOptionCurveEaseInOut
                    animations:^{
                      _buttonsView.alpha=1.0;
+                     /*
+                     _buttonsView.layer.borderColor=[UIColor orangeColor].CGColor;
+                     _buttonsView.layer.borderWidth=2.0f;
+                      */
+                     //[_buttonsView setBackgroundColor:[UIColor yellowColor]];
+
                    }
                    completion:^(BOOL finished){
                      NSLog(@"Done!");
@@ -344,7 +363,7 @@
   _runningYButton=10.0f;
   NSDictionary *menus = [[NSDictionary alloc] initWithObjectsAndKeys:@"menus", @"name", @"some", @"id", nil];
   UIView *menusV=[self renderButton:menus];
-  menusV.frame=CGRectMake(_menuLeftOffset, _runningYButton, 260.0f, 43.0f);
+  menusV.frame=CGRectMake(_menuLeftOffset, _runningYButton, _buttonWidth, 43.0f);
 
   menusV.layer.borderColor=[UIColor whiteColor].CGColor;
   menusV.layer.borderWidth=1.0f;
@@ -361,7 +380,7 @@
   NSDictionary *news = [[NSDictionary alloc] initWithObjectsAndKeys:@"info - news", @"name", @"some", @"id", nil];
   UIView *newsV=[self renderButton:news];
   
-  newsV.frame=CGRectMake(_menuLeftOffset, _runningYButton, 260.0f, 43.0f);
+  newsV.frame=CGRectMake(_menuLeftOffset, _runningYButton, _buttonWidth, 43.0f);
   if((newsV.frame.size.height + 10.0f) < 85){
     NSLog(@"that is less %f", newsV.frame.size.height);
   }
@@ -381,7 +400,7 @@
   NSDictionary *map = [[NSDictionary alloc] initWithObjectsAndKeys:@"map", @"name", @"some", @"id", nil];
   UIView *mapV=[self renderButton:map];
   
-  mapV.frame=CGRectMake(_menuLeftOffset, _runningYButton, 260.0f, 43.0f);
+  mapV.frame=CGRectMake(_menuLeftOffset, _runningYButton, _buttonWidth, 43.0f);
   if((mapV.frame.size.height + 10.0f) < 85){
     //NSLog(@"that is less %f", newsV.frame.size.height);
   }
@@ -501,18 +520,27 @@
 
 -(ButtonView *)renderButton:(NSDictionary *)item
 {
-  UILabel *mecButton = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 20.0f,180.0f, 0.0f)];
+  //UILabel *mecButton = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 20.0f,180.0f, 0.0f)];
+  UILabel *mecButton = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 20.0f,_buttonWidth, 0.0f)];
+
   mecButton.textAlignment=NSTextAlignmentCenter;
   mecButton.numberOfLines=0;
   mecButton.text=[[item objectForKey:@"name"] uppercaseString];
   mecButton.font=MYMainSlightlyLargerFont();
+  
   mecButton.textColor=[UIColor whiteColor];
+  
+  //mecButton.layer.borderWidth=2.0f;
+  //mecButton.layer.borderColor=[UIColor blueColor].CGColor;
+  
   //mecButton.font =[UIFont fontWithName:@"Courier-Bold" size:18.0];
   mecButton.font=MYSplashMenuFont();
   [mecButton sizeToFit];
-  mecButton.frame=CGRectMake(((260.0f - mecButton.frame.size.width)/2), 11.0f, mecButton.frame.size.width, mecButton.frame.size.height);
+ // mecButton.frame=CGRectMake(((260.0f - mecButton.frame.size.width)/2), 11.0f, mecButton.frame.size.width, mecButton.frame.size.height);
+  mecButton.frame=CGRectMake(((_buttonWidth - mecButton.frame.size.width)/2), 11.0f, mecButton.frame.size.width, mecButton.frame.size.height);
+
   UIImageView *arrowUp = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow-up"]];
-  arrowUp.frame=CGRectMake(220.0f, 18.0f, arrowUp.frame.size.width, arrowUp.frame.size.height);
+  arrowUp.frame=CGRectMake((_buttonWidth-50.0f), 18.0f, arrowUp.frame.size.width, arrowUp.frame.size.height);
   
   ButtonView *menuV=[[ButtonView alloc] initWithFrame:CGRectZero];
   menuV.labelHeight=mecButton.frame.size.height;

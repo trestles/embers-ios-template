@@ -13,7 +13,6 @@
 
 
 
-/*
 NSString* EMBERSlocationName(){
   return @"A.O.C.";
 }
@@ -25,7 +24,6 @@ NSString* EMBERSlocationAddressShort(){
 NSString* EMBERSlocationAddressCity(){
   return @"Los Angeles, CA 90048";
 }
-*/
 
 NSString* EMBERSenv(){
   return @"production";

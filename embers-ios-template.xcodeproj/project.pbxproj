@@ -43,6 +43,9 @@
 		6B6EE8981A449F7A004A58D9 /* arrow-down-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EE8961A449F7A004A58D9 /* arrow-down-circle.png */; };
 		6B6EE89B1A449F8C004A58D9 /* glass-fork.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EE8991A449F8C004A58D9 /* glass-fork.png */; };
 		6B6EE89C1A449F8C004A58D9 /* glass-fork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EE89A1A449F8C004A58D9 /* glass-fork@2x.png */; };
+		6B6EE89E1A44A1B6004A58D9 /* arrow-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EE89D1A44A1B6004A58D9 /* arrow-down@2x.png */; };
+		6B6EE8A11A44A312004A58D9 /* image-down1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EE89F1A44A312004A58D9 /* image-down1.png */; };
+		6B6EE8A21A44A312004A58D9 /* image-up1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EE8A01A44A312004A58D9 /* image-up1.png */; };
 		6BC81D631A440ED90042DA9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC81D621A440ED90042DA9A /* main.m */; };
 		6BC81D661A440ED90042DA9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC81D651A440ED90042DA9A /* AppDelegate.m */; };
 		6BC81D6C1A440ED90042DA9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC81D6A1A440ED90042DA9A /* Main.storyboard */; };
@@ -126,6 +129,9 @@
 		6B6EE8961A449F7A004A58D9 /* arrow-down-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down-circle.png"; sourceTree = "<group>"; };
 		6B6EE8991A449F8C004A58D9 /* glass-fork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glass-fork.png"; sourceTree = "<group>"; };
 		6B6EE89A1A449F8C004A58D9 /* glass-fork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glass-fork@2x.png"; sourceTree = "<group>"; };
+		6B6EE89D1A44A1B6004A58D9 /* arrow-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-down@2x.png"; sourceTree = "<group>"; };
+		6B6EE89F1A44A312004A58D9 /* image-down1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-down1.png"; sourceTree = "<group>"; };
+		6B6EE8A01A44A312004A58D9 /* image-up1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-up1.png"; sourceTree = "<group>"; };
 		6BC81D5D1A440ED90042DA9A /* embers-ios-template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "embers-ios-template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC81D611A440ED90042DA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BC81D621A440ED90042DA9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -173,6 +179,9 @@
 		6B6EE8841A441D8E004A58D9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6B6EE89F1A44A312004A58D9 /* image-down1.png */,
+				6B6EE8A01A44A312004A58D9 /* image-up1.png */,
+				6B6EE89D1A44A1B6004A58D9 /* arrow-down@2x.png */,
 				6B6EE8991A449F8C004A58D9 /* glass-fork.png */,
 				6B6EE89A1A449F8C004A58D9 /* glass-fork@2x.png */,
 				6B6EE8951A449F7A004A58D9 /* arrow-down-circle@2x.png */,
@@ -422,13 +431,16 @@
 				6B6EE89B1A449F8C004A58D9 /* glass-fork.png in Resources */,
 				6B6EE88B1A441DF3004A58D9 /* main-bg-clear.png in Resources */,
 				6B6EE8971A449F7A004A58D9 /* arrow-down-circle@2x.png in Resources */,
+				6B6EE8A11A44A312004A58D9 /* image-down1.png in Resources */,
 				6B6EE89C1A449F8C004A58D9 /* glass-fork@2x.png in Resources */,
 				6B6EE88C1A441DF3004A58D9 /* main-bg-clear@2x.png in Resources */,
 				6B6EE8861A441DC7004A58D9 /* main-bg-black.png in Resources */,
 				6BC81D711A440ED90042DA9A /* LaunchScreen.xib in Resources */,
+				6B6EE8A21A44A312004A58D9 /* image-up1.png in Resources */,
 				6B6EE8881A441DD0004A58D9 /* main-bg-black@2x.png in Resources */,
 				6BC81D6E1A440ED90042DA9A /* Images.xcassets in Resources */,
 				6B6EE8931A449F18004A58D9 /* close-icon@2x.png in Resources */,
+				6B6EE89E1A44A1B6004A58D9 /* arrow-down@2x.png in Resources */,
 				6B6EE8901A449EEC004A58D9 /* arrow-up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

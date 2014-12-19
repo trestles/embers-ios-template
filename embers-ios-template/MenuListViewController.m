@@ -76,8 +76,8 @@
     for(Menu *m in self.menus){
       [self renderMenuItem:m];
     }
-    _mainScrollView.contentSize = CGSizeMake(320.0f,_yRunningValue  + 150.0f);
-    _mainScrollView.frame=CGRectMake(0.0f, 0.0f, 320.0, _yRunningValue + 150.0f);
+    _mainScrollView.contentSize = CGSizeMake(self.view.frame.size.width,_yRunningValue  + 150.0f);
+    _mainScrollView.frame=CGRectMake(0.0f, 0.0f, self.view.frame.size.width, _yRunningValue + 150.0f);
     NSLog(@"here is _yRunningValue %f", _yRunningValue);
     [self.view addSubview:_mainScrollView];
   }else{
@@ -114,7 +114,9 @@
 -(void)renderMenuItem:menu{
   CGFloat _miLVHeight;
   _miLVHeight=124.0f;
-  MenuListItemView *menuView=[[MenuListItemView alloc] initWithFrame:CGRectMake(_x, _yRunningValue, 320.0f, _miLVHeight)];
+  MenuListItemView *menuView=[[MenuListItemView alloc] initWithFrame:CGRectMake(_x, _yRunningValue, self.view.frame.size.width, _miLVHeight)];
+  //MenuListItemView *menuView=[[MenuListItemView alloc] initWithFrame:CGRectMake(_x, _yRunningValue, self.view.frame.size.width, _miLVHeight)];
+
   _yRunningValue = _yRunningValue + _miLVHeight;
   UIImageView *smlShader =[[UIImageView alloc] init];
   
@@ -146,7 +148,9 @@
      }];
   }
   
-  smlShader.frame = CGRectMake(0,0,320,_miLVHeight); //Change the value of the frame
+  //smlShader.frame = CGRectMake(0,0,320,_miLVHeight); //Change the value of the frame
+  smlShader.frame = CGRectMake(0,0, self.view.frame.size.width, _miLVHeight); //Change the value of the frame
+
   [menuView addSubview:smlShader];
 
   menuView.nameLabel.text=[menu objectForKey:@"name"];
@@ -158,7 +162,8 @@
   /*
   menuView.nameLabel.layer.borderColor=[UIColor blueColor].CGColor;
   menuView.nameLabel.layer.borderWidth=2.0f;
-   */
+  */
+  
   [menuView.nameLabel setNumberOfLines:0];
   [menuView.nameLabel sizeToFit];
   
@@ -169,10 +174,9 @@
   if(MYLog()){
     NSLog(@"width: %f and height: %f", menuView.nameLabel.frame.size.width,menuView.nameLabel.frame.size.height);
   }
-  CGFloat _leftX=(320.0f - menuView.nameLabel.frame.size.width)/2;
+  CGFloat _leftX=(self.view.frame.size.width - menuView.nameLabel.frame.size.width)/2;
   
   CGFloat topOffset=(124 - menuView.nameLabel.frame.size.height)/2;
-  
   
   menuView.nameLabel.frame=CGRectMake(_leftX, /* 25.0f */ topOffset, menuView.nameLabel.frame.size.width, menuView.nameLabel.frame.size.height);
 

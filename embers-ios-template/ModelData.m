@@ -25,7 +25,7 @@
 +(void)sayHello
 {
   NSLog(@"I am saying hello");
-  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/locations/37/mobile_home",MYHost()]];
+  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/locations/37/mobile_home",EMBERSHost()]];
   //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
   NSURLRequest *request = [NSURLRequest requestWithURL:URL];
   AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -103,7 +103,7 @@
 
 +(void)getEachMenu:(NSString *) menuID
 {
-  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/ipad-menu/%@",MYHost(), menuID]];
+  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/ipad-menu/%@",EMBERSHost(), menuID]];
   //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
   NSURLRequest *request = [NSURLRequest requestWithURL:URL];
   AFHTTPRequestOperation *op2 = [[AFHTTPRequestOperation alloc] initWithRequest:request];

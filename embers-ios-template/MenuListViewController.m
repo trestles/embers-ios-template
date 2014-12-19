@@ -83,7 +83,7 @@
   }else{
 
   
-  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/locations/%@/mobile_home",MYHost(),MYLocationID()]];
+  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/locations/%@/mobile_home",EMBERSHost(),MYLocationID()]];
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   NSURLRequest *request = [NSURLRequest requestWithURL:URL];
   AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -124,7 +124,7 @@
     smlShader.image = [UIImage imageNamed:@"my.jpg"];
   }else{
     NSLog(@"there is a mobile background image %@", mobileBackgroundImage);
-    NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",MYImageHost(), mobileBackgroundImage]];
+    NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",EMBERSImageHost(), mobileBackgroundImage]];
 
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     [manager downloadWithURL:imageURL

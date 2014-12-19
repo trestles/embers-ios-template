@@ -74,7 +74,7 @@ NSString *MYLocationID() {
 }
 
 
-NSString *MYHost() {
+NSString *EMBERSHost() {
   if([EMBERSenv() isEqualToString:@"dev"]){
     return @"http://localhost:3000";
   }else if([EMBERSenv() isEqualToString:@"production"]){
@@ -83,7 +83,7 @@ NSString *MYHost() {
   return nil;
 }
 
-NSString *MYImageHost() {
+NSString *EMBERSImageHost() {
   if([EMBERSenv() isEqualToString:@"dev"]){
     return @"http://localhost:3000";
   }else if([EMBERSenv() isEqualToString:@"production"]){

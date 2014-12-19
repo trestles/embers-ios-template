@@ -19,8 +19,8 @@ extern NSString *MYLocationID();
 extern CGFloat MYLocationLatitude();
 extern CGFloat MYLocationLongitude();
 
-extern NSString *MYHost();
-extern NSString *MYImageHost();
+extern NSString *EMBERSHost();
+extern NSString *EMBERSImageHost();
 extern NSString *MYLocationId();
 extern BOOL MYShowBorders();
 extern BOOL MYLog();

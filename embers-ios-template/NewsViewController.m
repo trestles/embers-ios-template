@@ -45,7 +45,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-  [self.myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",MYHost(), EMBERSnewsURL()]]]];
+  [self.myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",EMBERSHost(), EMBERSnewsURL()]]]];
   self.myWebView.frame=CGRectMake(0.0f, 60.0f, 320.0f, 600.0f);
   [self.view addSubview:self.myWebView];
 }

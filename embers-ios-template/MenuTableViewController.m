@@ -161,7 +161,7 @@
 -(void)getTimestamp:(NSInteger)menuID
 {
   if(self.presentedAsModal){
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menu_categories/37/sunday-supper",MYHost()]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menu_categories/37/sunday-supper",EMBERSHost()]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -177,7 +177,7 @@
     }];
     [[NSOperationQueue mainQueue] addOperation:op];
   }else{
-    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menus/%lu/timestamp",MYHost(), (long)menuID]];
+    NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menus/%lu/timestamp",EMBERSHost(), (long)menuID]];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     op.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -199,7 +199,7 @@
 
 -(void)getEachMenu:(NSString *) menuID
 {
-  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menus/%@/mobile",MYHost(), menuID]];
+  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menus/%@/mobile",EMBERSHost(), menuID]];
   NSURLRequest *request = [NSURLRequest requestWithURL:URL];
   AFHTTPRequestOperation *op2 = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   op2.responseSerializer = [AFJSONResponseSerializer serializer];

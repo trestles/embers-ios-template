@@ -117,7 +117,7 @@
     self.bgSV.delegate=self;
     [self.view addSubview:self.bgSV];
     
-    NSURL *imageURL = [NSURL URLWithString:[MYImageHost() stringByAppendingString:_menuItem.instoreImageURL]];
+    NSURL *imageURL = [NSURL URLWithString:[EMBERSImageHost() stringByAppendingString:_menuItem.instoreImageURL]];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     [manager downloadWithURL:imageURL
@@ -183,7 +183,7 @@
     if(bgImg!=nil){
       //NSLog(@"WILL CHECK TO SEE menu_item_background_detail %@", bgImg[@"url"]);
       SDWebImageManager *manager = [SDWebImageManager sharedManager];
-      NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",MYHost(), bgImg[@"url"]]];
+      NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",EMBERSHost(), bgImg[@"url"]]];
       [manager downloadWithURL:imageURL
                        options:0
                       progress:^(NSInteger receivedSize, NSInteger expectedSize)

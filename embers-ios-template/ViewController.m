@@ -73,7 +73,7 @@
     [[CacheController sharedInstance] setCache:myInfo forKey:@"mobileMenuItemDetailBackground"];
     
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", MYImageHost(),  mobileMenuItemDetail]];
+    NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", EMBERSImageHost(),  mobileMenuItemDetail]];
     [manager downloadWithURL:imageURL
                      options:0
                     progress:^(NSInteger receivedSize, NSInteger expectedSize)
@@ -97,7 +97,7 @@
     NSLog(@"about to get image");
     
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", MYImageHost(), mobileBackgroundImage]];
+    NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", EMBERSImageHost(), mobileBackgroundImage]];
     [manager downloadWithURL:imageURL
                      options:0
                     progress:^(NSInteger receivedSize, NSInteger expectedSize)
@@ -176,7 +176,7 @@
   
   [self.view bringSubviewToFront:self.helpButton];
 
-  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/locations/%@/mobile_home",MYHost(),MYLocationID()]];
+  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/locations/%@/mobile_home",EMBERSHost(),MYLocationID()]];
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   NSURLRequest *request = [NSURLRequest requestWithURL:URL];
   AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -386,7 +386,7 @@
 
 -(void)getImages:(NSString *) menuID
 {
-  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menus/%@/images",MYHost(), menuID]];
+  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menus/%@/images",EMBERSHost(), menuID]];
   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
   NSURLRequest *request = [NSURLRequest requestWithURL:URL];
   AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -444,7 +444,7 @@
 
 -(void)getEachMenu:(NSString *) menuID
 {
-  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menus/%@/mobile",MYHost(), menuID]];
+  NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/arc/v1/api/menus/%@/mobile",EMBERSHost(), menuID]];
   //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
   NSURLRequest *request = [NSURLRequest requestWithURL:URL];
   AFHTTPRequestOperation *op2 = [[AFHTTPRequestOperation alloc] initWithRequest:request];

@@ -21,12 +21,12 @@
 // THE SOFTWARE.
 // a test for you
 // jtjt
-#import "AtFRecord.h"
+#import "EmbersRecord.h"
 
 //@class Venue;
 //@class Menu;
 
-@interface MenuItem : AtFRecord
+@interface MenuItem : EmbersRecord
 
 @property (nonatomic, assign) NSUInteger menuItemID;
 @property (nonatomic, strong) NSString *header;

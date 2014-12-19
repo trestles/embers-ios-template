@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6B353CE11A44BC9000B5D930 /* EMBERSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353CE01A44BC9000B5D930 /* EMBERSConfig.m */; };
+		6B353CE41A44C50C00B5D930 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353CE31A44C50C00B5D930 /* Location.m */; };
+		6B353CE71A44C5D200B5D930 /* EmbersRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353CE61A44C5D200B5D930 /* EmbersRecord.m */; };
 		6B6EE8471A4419C8004A58D9 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE83C1A4419C8004A58D9 /* NewsViewController.m */; };
 		6B6EE8481A4419C8004A58D9 /* MIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE83E1A4419C8004A58D9 /* MIViewController.m */; };
 		6B6EE8491A4419C8004A58D9 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE8401A4419C8004A58D9 /* MenuTableViewController.m */; };
@@ -70,6 +72,10 @@
 		153C1C532813166E886D648D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6B353CDF1A44BC7B00B5D930 /* EMBERSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBERSConfig.h; sourceTree = "<group>"; };
 		6B353CE01A44BC9000B5D930 /* EMBERSConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBERSConfig.m; sourceTree = "<group>"; };
+		6B353CE21A44C50C00B5D930 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		6B353CE31A44C50C00B5D930 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		6B353CE51A44C5D200B5D930 /* EmbersRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmbersRecord.h; sourceTree = "<group>"; };
+		6B353CE61A44C5D200B5D930 /* EmbersRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmbersRecord.m; sourceTree = "<group>"; };
 		6B6EE83B1A4419C8004A58D9 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		6B6EE83C1A4419C8004A58D9 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		6B6EE83D1A4419C8004A58D9 /* MIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIViewController.h; sourceTree = "<group>"; };
@@ -311,6 +317,8 @@
 		6BC81D8E1A4410DA0042DA9A /* models */ = {
 			isa = PBXGroup;
 			children = (
+				6B353CE51A44C5D200B5D930 /* EmbersRecord.h */,
+				6B353CE61A44C5D200B5D930 /* EmbersRecord.m */,
 				6B6EE84D1A4419D8004A58D9 /* ProcessedInstore.h */,
 				6B6EE84E1A4419D8004A58D9 /* ProcessedInstore.m */,
 				6B6EE84F1A4419D8004A58D9 /* TastingNote.h */,
@@ -329,6 +337,8 @@
 				6B6EE85C1A4419D8004A58D9 /* MenuCache.m */,
 				6B6EE85D1A4419D8004A58D9 /* ModelData.h */,
 				6B6EE85E1A4419D8004A58D9 /* ModelData.m */,
+				6B353CE21A44C50C00B5D930 /* Location.h */,
+				6B353CE31A44C50C00B5D930 /* Location.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -511,9 +521,11 @@
 				6B6EE87B1A4419E5004A58D9 /* MenuItemCell.m in Sources */,
 				6B6EE87C1A4419E5004A58D9 /* ButtonView.m in Sources */,
 				6B6EE8781A4419E5004A58D9 /* MenuItemView.m in Sources */,
+				6B353CE71A44C5D200B5D930 /* EmbersRecord.m in Sources */,
 				6B6EE8661A4419D8004A58D9 /* MenuCache.m in Sources */,
 				6B6EE8761A4419E5004A58D9 /* MHBottomDecoratorCell.m in Sources */,
 				6B6EE87F1A441A3B004A58D9 /* NSDictionary+Additions.m in Sources */,
+				6B353CE41A44C50C00B5D930 /* Location.m in Sources */,
 				6B6EE8601A4419D8004A58D9 /* TastingNote.m in Sources */,
 				6B6EE8771A4419E5004A58D9 /* MenuHeaderView.m in Sources */,
 				6B6EE84C1A4419C8004A58D9 /* MapViewController.m in Sources */,

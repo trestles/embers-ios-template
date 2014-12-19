@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Trestles. All rights reserved.
 //
 
-#import "AtFRecord.h"
+#import "EmbersRecord.h"
 
-@interface MenuHeader : AtFRecord
+@interface MenuHeader : EmbersRecord
 
 @property (nonatomic, assign) NSUInteger menuHeaderID;
 @property (nonatomic, strong) NSString *name;

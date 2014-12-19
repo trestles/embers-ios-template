@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 Trestles. All rights reserved.
 //
 
-#import "AtFRecord.h"
+#import "EmbersRecord.h"
 #import "MenuItem.h"
 #import "ProcessedInstore.h"
 #import "MenuItem.h"
 
-@interface TastingNote : AtFRecord
+@interface TastingNote : EmbersRecord
 
 @property (nonatomic, assign) NSUInteger tastingNoteID;
 @property (nonatomic, strong) NSString *header;

@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AtFRecord.h"
+#import "EmbersRecord.h"
 
-@interface MenuCache : AtFRecord
+@interface MenuCache : EmbersRecord
   @property (nonatomic, assign) NSInteger menuID;
   @property (nonatomic, strong) NSString *jsonString;
 @end

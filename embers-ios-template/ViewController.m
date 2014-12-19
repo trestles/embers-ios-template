@@ -110,6 +110,7 @@
        if (image)
        {
          _backgroundView.image=image;
+         _backgroundView.frame=CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height);
          [UIView animateWithDuration:1.0
                                delay:0.0
                              options:UIViewAnimationOptionTransitionCrossDissolve
@@ -170,6 +171,7 @@
   [self defaults];
   [self.view setBackgroundColor:[UIColor blackColor]];
   _backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"main-bg-clear"]];
+  _backgroundView.frame=CGRectMake(0.0f, 0.0f, 320.0f, self.view.frame.size.height);
   _backgroundView.alpha=0.0f;
   [self.view addSubview:_backgroundView];
   self.helpButton.alpha=0.0f;

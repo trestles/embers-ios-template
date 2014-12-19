@@ -71,7 +71,7 @@ BOOL MYLog(){
 
 NSString *MYLocationID() {
   return @"48";  // AOC
-  return @"37";  // LUCQUES
+  //return @"37";  // LUCQUES
 
 }
 

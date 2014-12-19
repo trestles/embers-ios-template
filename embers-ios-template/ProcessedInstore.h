@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Trestles. All rights reserved.
 //
 
-#import "AtFRecord.h"
+#import "EmbersRecord.h"
 
-@interface ProcessedInstore : AtFRecord
+@interface ProcessedInstore : EmbersRecord
 @property (nonatomic, strong) NSString *header;
 @property (nonatomic, strong) NSString *body;
 @property (nonatomic, strong) NSMutableArray *frags;

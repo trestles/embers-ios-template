@@ -34,7 +34,6 @@
   }else{
     self.latitude=[[attributes objectForKey:@"latitude"] doubleValue];
   }
-  self.id=[[attributes objectForKey:@"id"] integerValue];
   self.locationID=[[attributes objectForKey:@"id"] integerValue];
   self.distance=[[attributes objectForKey:@"distance"] doubleValue];
   return self;

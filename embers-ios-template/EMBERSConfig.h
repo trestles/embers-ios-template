@@ -9,11 +9,9 @@
 #import <UIKit/UIKit.h>
 
 extern NSString* EMBERSnotificationToken();
-/*
 extern NSString* EMBERSlocationName();
 extern NSString* EMBERSlocationAddressShort();
 extern NSString* EMBERSlocationAddressCity();
-*/
 extern UIFont* EMBERSMapMiniViewFont();
 extern NSString* EMBERSnewsURL();
 extern NSString *EMBERSLocationID();

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B353CE11A44BC9000B5D930 /* EMBERSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353CE01A44BC9000B5D930 /* EMBERSConfig.m */; };
 		6B6EE8471A4419C8004A58D9 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE83C1A4419C8004A58D9 /* NewsViewController.m */; };
 		6B6EE8481A4419C8004A58D9 /* MIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE83E1A4419C8004A58D9 /* MIViewController.m */; };
 		6B6EE8491A4419C8004A58D9 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE8401A4419C8004A58D9 /* MenuTableViewController.m */; };
@@ -30,7 +31,6 @@
 		6B6EE87B1A4419E5004A58D9 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE8731A4419E5004A58D9 /* MenuItemCell.m */; };
 		6B6EE87C1A4419E5004A58D9 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE8751A4419E5004A58D9 /* ButtonView.m */; };
 		6B6EE87F1A441A3B004A58D9 /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE87E1A441A3B004A58D9 /* NSDictionary+Additions.m */; };
-		6B6EE8821A441A49004A58D9 /* MYUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6EE8811A441A49004A58D9 /* MYUtility.m */; };
 		6B6EE8861A441DC7004A58D9 /* main-bg-black.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EE8851A441DC7004A58D9 /* main-bg-black.png */; };
 		6B6EE8881A441DD0004A58D9 /* main-bg-black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EE8871A441DD0004A58D9 /* main-bg-black@2x.png */; };
 		6B6EE88B1A441DF3004A58D9 /* main-bg-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6EE8891A441DF3004A58D9 /* main-bg-clear.png */; };
@@ -68,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		153C1C532813166E886D648D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6B353CDF1A44BC7B00B5D930 /* EMBERSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBERSConfig.h; sourceTree = "<group>"; };
+		6B353CE01A44BC9000B5D930 /* EMBERSConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBERSConfig.m; sourceTree = "<group>"; };
 		6B6EE83B1A4419C8004A58D9 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		6B6EE83C1A4419C8004A58D9 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		6B6EE83D1A4419C8004A58D9 /* MIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIViewController.h; sourceTree = "<group>"; };
@@ -114,8 +116,6 @@
 		6B6EE8751A4419E5004A58D9 /* ButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonView.m; sourceTree = "<group>"; };
 		6B6EE87D1A441A3B004A58D9 /* NSDictionary+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Additions.h"; sourceTree = "<group>"; };
 		6B6EE87E1A441A3B004A58D9 /* NSDictionary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Additions.m"; sourceTree = "<group>"; };
-		6B6EE8801A441A49004A58D9 /* MYUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYUtility.h; sourceTree = "<group>"; };
-		6B6EE8811A441A49004A58D9 /* MYUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYUtility.m; sourceTree = "<group>"; };
 		6B6EE8831A441BB9004A58D9 /* EmbersIosTemplate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmbersIosTemplate-Prefix.pch"; sourceTree = "<group>"; };
 		6B6EE8851A441DC7004A58D9 /* main-bg-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-bg-black.png"; sourceTree = "<group>"; };
 		6B6EE8871A441DD0004A58D9 /* main-bg-black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-bg-black@2x.png"; sourceTree = "<group>"; };
@@ -238,12 +238,12 @@
 		6BC81D601A440ED90042DA9A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B353CE01A44BC9000B5D930 /* EMBERSConfig.m */,
+				6B353CDF1A44BC7B00B5D930 /* EMBERSConfig.h */,
 				6B6EE87D1A441A3B004A58D9 /* NSDictionary+Additions.h */,
 				6B6EE87E1A441A3B004A58D9 /* NSDictionary+Additions.m */,
 				6BC81D921A4411220042DA9A /* CacheController.h */,
 				6BC81D931A4411220042DA9A /* CacheController.m */,
-				6B6EE8801A441A49004A58D9 /* MYUtility.h */,
-				6B6EE8811A441A49004A58D9 /* MYUtility.m */,
 				6BC81D611A440ED90042DA9A /* Info.plist */,
 				6BC81D621A440ED90042DA9A /* main.m */,
 				6B6EE8831A441BB9004A58D9 /* EmbersIosTemplate-Prefix.pch */,
@@ -492,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B353CE11A44BC9000B5D930 /* EMBERSConfig.m in Sources */,
 				6B6EE8791A4419E5004A58D9 /* MenuListItemView.m in Sources */,
 				6B6EE8631A4419D8004A58D9 /* AtFRecord.m in Sources */,
 				6B6EE84A1A4419C8004A58D9 /* ViewController.m in Sources */,
@@ -505,7 +506,6 @@
 				6B6EE8471A4419C8004A58D9 /* NewsViewController.m in Sources */,
 				6B6EE8671A4419D8004A58D9 /* ModelData.m in Sources */,
 				6B6EE8651A4419D8004A58D9 /* AppData.m in Sources */,
-				6B6EE8821A441A49004A58D9 /* MYUtility.m in Sources */,
 				6B6EE8481A4419C8004A58D9 /* MIViewController.m in Sources */,
 				6B6EE84B1A4419C8004A58D9 /* MenuListViewController.m in Sources */,
 				6B6EE87B1A4419E5004A58D9 /* MenuItemCell.m in Sources */,

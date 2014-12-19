@@ -50,7 +50,7 @@
 		6BC81D661A440ED90042DA9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC81D651A440ED90042DA9A /* AppDelegate.m */; };
 		6BC81D6C1A440ED90042DA9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC81D6A1A440ED90042DA9A /* Main.storyboard */; };
 		6BC81D6E1A440ED90042DA9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC81D6D1A440ED90042DA9A /* Images.xcassets */; };
-		6BC81D711A440ED90042DA9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC81D6F1A440ED90042DA9A /* LaunchScreen.xib */; };
+		6BC81D711A440ED90042DA9A /* LaunchScreen-bak.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC81D6F1A440ED90042DA9A /* LaunchScreen-bak.xib */; };
 		6BC81D7D1A440ED90042DA9A /* embers_ios_templateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC81D7C1A440ED90042DA9A /* embers_ios_templateTests.m */; };
 		6BC81D941A4411220042DA9A /* CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC81D931A4411220042DA9A /* CacheController.m */; };
 		B0C002A28EC081550CBEFF76 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA45D39F6C98EC5117D1C16 /* libPods.a */; };
@@ -139,7 +139,7 @@
 		6BC81D651A440ED90042DA9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6BC81D6B1A440ED90042DA9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BC81D6D1A440ED90042DA9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6BC81D701A440ED90042DA9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6BC81D701A440ED90042DA9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/LaunchScreen-bak.xib"; sourceTree = "<group>"; };
 		6BC81D761A440ED90042DA9A /* embers-ios-templateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "embers-ios-templateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC81D7B1A440ED90042DA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BC81D7C1A440ED90042DA9A /* embers_ios_templateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = embers_ios_templateTests.m; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 				6BC81D651A440ED90042DA9A /* AppDelegate.m */,
 				6BC81D6A1A440ED90042DA9A /* Main.storyboard */,
 				6BC81D6D1A440ED90042DA9A /* Images.xcassets */,
-				6BC81D6F1A440ED90042DA9A /* LaunchScreen.xib */,
+				6BC81D6F1A440ED90042DA9A /* LaunchScreen-bak.xib */,
 				6BC81D601A440ED90042DA9A /* Supporting Files */,
 			);
 			path = "embers-ios-template";
@@ -435,7 +435,7 @@
 				6B6EE89C1A449F8C004A58D9 /* glass-fork@2x.png in Resources */,
 				6B6EE88C1A441DF3004A58D9 /* main-bg-clear@2x.png in Resources */,
 				6B6EE8861A441DC7004A58D9 /* main-bg-black.png in Resources */,
-				6BC81D711A440ED90042DA9A /* LaunchScreen.xib in Resources */,
+				6BC81D711A440ED90042DA9A /* LaunchScreen-bak.xib in Resources */,
 				6B6EE8A21A44A312004A58D9 /* image-up1.png in Resources */,
 				6B6EE8881A441DD0004A58D9 /* main-bg-black@2x.png in Resources */,
 				6BC81D6E1A440ED90042DA9A /* Images.xcassets in Resources */,
@@ -549,12 +549,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6BC81D6F1A440ED90042DA9A /* LaunchScreen.xib */ = {
+		6BC81D6F1A440ED90042DA9A /* LaunchScreen-bak.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6BC81D701A440ED90042DA9A /* Base */,
 			);
-			name = LaunchScreen.xib;
+			name = "LaunchScreen-bak.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

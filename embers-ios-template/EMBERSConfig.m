@@ -92,7 +92,7 @@ NSString *EMBERSImageHost() {
   return nil;
 }
 
-BOOL MYShowBorders() {
+BOOL EMBERSShowBorders() {
   return YES;
   //return NO;
 }

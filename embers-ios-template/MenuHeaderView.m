@@ -62,7 +62,7 @@
     }
     self.nameLabel.text=_menuHeader.nameExt;
 
-    if(MYShowBorders()){
+    if(EMBERSShowBorders()){
       self.layer.borderColor =[UIColor blackColor].CGColor;
       self.layer.borderWidth = 3.0f;
       self.nameLabel.layer.borderColor = [UIColor redColor].CGColor;

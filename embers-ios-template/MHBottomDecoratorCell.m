@@ -9,6 +9,13 @@
 #import "MHBottomDecoratorCell.h"
 #import "EMBERSConfig.h"
 
+@interface MHBottomDecoratorCell(){
+  CGFloat _screenWidth;
+}
+
+@end
+
+
 @implementation MHBottomDecoratorCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -35,9 +42,11 @@
 
 -(void)updateCell:(NSDictionary *)tmpDic
 {
-  UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 10.0f, 240.0f, 0.0f)];
+  _screenWidth = [UIScreen mainScreen].bounds.size.width;
+  UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 10.0f, (_screenWidth - 80.0f), 0.0f)];
   myLabel.text=[tmpDic objectForKey:@"name"];
   myLabel.font=MYMainFont();
+  
 
   myLabel.numberOfLines=0;
   [myLabel sizeToFit];

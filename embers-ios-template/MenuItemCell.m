@@ -149,7 +149,7 @@
 
     self.detailLabel.frame=CGRectMake(_miHeaderDetailLeftPadding, self.headerLabel.frame.size.height +  12.0f, _newContentWidth, self.detailLabel.frame.size.height);
     NSLog(@"HEIGHT of Detail: %f",self.detailLabel.frame.size.height);
-    if(MYShowBorders()){
+    if(EMBERSShowBorders()){
       self.detailLabel.layer.borderColor=[UIColor blueColor].CGColor;
       self.detailLabel.layer.borderWidth=2.0f;
     }
@@ -175,7 +175,7 @@
   
   self.headerLabel.frame=CGRectMake(_miHeaderDetailLeftPadding, _miTopPad, _newContentWidth, 1000.0f);
   [self.headerLabel sizeToFit];
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     self.headerLabel.layer.borderColor=[UIColor redColor].CGColor;
     self.headerLabel.layer.borderWidth=2.0f;
   }
@@ -205,7 +205,7 @@
   //NSLog(@"here is the price %@", price);
   self.priceLabel.font=MYMainFont();
   //[self.priceLabel sizeToFit];
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     self.priceLabel.layer.borderWidth=2.0f;
     self.priceLabel.layer.borderColor=[UIColor blueColor].CGColor;
     self.spotView.layer.borderWidth=2.0f;
@@ -247,7 +247,9 @@
     CGFloat leftSide=_screenWidth - self.priceLabel.frame.size.width - 20.0f;
     self.priceLabel.frame = CGRectMake(leftSide, _miTopPad, self.priceLabel.frame.size.width, self.priceLabel.frame.size.height);
     //_newLeftOffset=200.0f;
-    _newContentWidth=320.0f - self.priceLabel.frame.size.width - 20.0f - 40.0f;
+    _newContentWidth=_screenWidth - self.priceLabel.frame.size.width - 20.0f - 40.0f;
+    //_newLeftOffset=_screenWidth-30.0f-self.priceLabel.frame.size.width;
+
 
     
     
@@ -263,9 +265,13 @@
       self.priceLabel.numberOfLines=0;
       [self.priceLabel sizeToFit];
       NSLog(@"the priceLabel width is: %f for %@", self.priceLabel.frame.size.width, price);
-      self.priceLabel.frame = CGRectMake(200.0f, _miTopPad, self.priceLabel.frame.size.width, self.priceLabel.frame.size.height);
-      _newLeftOffset=200.0f;
-      _newContentWidth=160.0f;
+      CGFloat tmpPriceWidth=_screenWidth - 120.0f;
+      self.priceLabel.frame = CGRectMake(tmpPriceWidth, _miTopPad, self.priceLabel.frame.size.width, self.priceLabel.frame.size.height);
+      //_newLeftOffset=200.0f;
+      _newLeftOffset=_screenWidth - 120.0f;
+      //_newContentWidth=160.0f;
+      _newContentWidth=_screenWidth - 160.0f;
+
     }else{
     _newLeftOffset=_priceLeftPad;
     _newContentWidth=_miHeaderDetailWidth;

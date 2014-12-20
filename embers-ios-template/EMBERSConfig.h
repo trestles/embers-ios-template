@@ -21,7 +21,7 @@ extern CGFloat MYLocationLongitude();
 extern NSString *EMBERSHost();
 extern NSString *EMBERSImageHost();
 extern NSString *EMBERSLocationId();
-extern BOOL MYShowBorders();
+extern BOOL EMBERSShowBorders();
 extern BOOL MYLog();
 extern UIFont* MYMenuListFont(); // used in MenuListViewController
 

@@ -72,7 +72,7 @@
       _spotView = [[UIView alloc] initWithFrame:CGRectMake(9.0f, 0.0f, 10.0f, 16.0f)];
     }
 
-    if(MYShowBorders()){
+    if(EMBERSShowBorders()){
       self.layer.borderColor =[UIColor blackColor].CGColor;
       self.layer.borderWidth = 3.0f;
       self.headerLabel.layer.borderColor = [UIColor redColor].CGColor;
@@ -185,7 +185,7 @@
   _detailLabel.numberOfLines = 0;
   _detailLabel.text=menuItem.detail;
 
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     _detailLabel.layer.borderColor = [UIColor greenColor].CGColor;
     _detailLabel.layer.borderWidth = 3.0;
   }
@@ -212,7 +212,7 @@
   _priceLabel.textColor = MYMenuFontColor();
   _priceLabel.font=_priceFont;
   
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     _priceLabel.layer.borderColor = [UIColor blueColor].CGColor;
     _priceLabel.layer.borderWidth = 1.0f;
   }

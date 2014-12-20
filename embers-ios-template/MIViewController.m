@@ -227,7 +227,7 @@
     _tastingNoteScrollView.scrollEnabled = YES;
     _tastingNoteScrollView.showsVerticalScrollIndicator=YES;
     _tastingNoteScrollView.userInteractionEnabled=YES;
-    if(MYShowBorders()){
+    if(EMBERSShowBorders()){
       _tastingNoteScrollView.layer.borderColor =[UIColor blackColor].CGColor;
       _tastingNoteScrollView.layer.borderWidth = 3.0f;
     }
@@ -354,14 +354,14 @@
   UIView *referencedTastingNote = [[UIView alloc] initWithFrame:CGRectMake(0.0f, _runningYPosition, 668.0f, 100.0f)];
   referencedTastingNote.backgroundColor = [UIColor whiteColor];
   
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     referencedTastingNote.layer.borderWidth = 2.0f;
     referencedTastingNote.layer.borderColor = [[UIColor redColor] CGColor];
   }
   
   UILabel *refLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 15.0f, 300.0F, 30.0f)];
   refLabel.textAlignment = NSTextAlignmentCenter;
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     refLabel.layer.borderWidth = 2.0f;
     refLabel.layer.borderColor = [[UIColor blueColor] CGColor];
   }
@@ -373,7 +373,7 @@
   refHeader.lineBreakMode = NSLineBreakByWordWrapping;
   refHeader.numberOfLines = 0;
   refHeader.font = _mainFont;
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     refHeader.layer.borderColor= [[UIColor blackColor] CGColor];
     refHeader.layer.borderWidth= 3.0f;
   }
@@ -384,7 +384,7 @@
   refPrice.lineBreakMode = NSLineBreakByWordWrapping;
   refPrice.font=_mainFont;
   refPrice.numberOfLines = 0;
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     refPrice.layer.borderColor= [[UIColor blackColor] CGColor];
     refPrice.layer.borderWidth= 3.0f;
   }
@@ -400,7 +400,7 @@
   UITextView *textview= [[UITextView alloc]initWithFrame:CGRectZero];
   
   
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     textview.layer.borderWidth = _borderWidthFloat;
     textview.layer.borderColor = [[UIColor greenColor] CGColor];
   }

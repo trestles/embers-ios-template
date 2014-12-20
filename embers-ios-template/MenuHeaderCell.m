@@ -56,7 +56,7 @@
   self.nameLabel.numberOfLines=0;
   self.nameLabel.textAlignment = NSTextAlignmentCenter;
   [self.nameLabel sizeToFit];
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     self.nameLabel.layer.borderColor=[UIColor redColor].CGColor;
     self.nameLabel.layer.borderWidth=2.0f;
   }
@@ -78,7 +78,7 @@
   self.nameLabel.frame=CGRectMake(leftOffset, _mhTopPad , /* 280.0f */ self.nameLabel.frame.size.width ,self.nameLabel.frame.size.height);
 
   //self.nameLabel.frame=CGRectMake(20.0f, _mhTopPad , 280.0f,30.0f);
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     self.nameLabel.layer.borderColor=[UIColor greenColor].CGColor;
     self.nameLabel.layer.borderWidth=2.0f;
   }
@@ -105,7 +105,7 @@
   decoratorLabel.frame=CGRectMake(((320.0f - decoratorLabel.frame.size.width)/2), self.height + 10.0f , decoratorLabel.frame.size.width,decoratorLabel.frame.size.height);
   //self.height+=decoratorLabel.frame.size.height;
 
-  if(MYShowBorders()){
+  if(EMBERSShowBorders()){
     decoratorLabel.layer.borderWidth=2.0f;
     decoratorLabel.layer.borderColor=[UIColor blueColor].CGColor;
   }

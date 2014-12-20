@@ -273,13 +273,15 @@
   if([dic isKindOfClass:[MenuHeader class]]){
     MenuHeaderCell *cell = (MenuHeaderCell *)[self.menuTV dequeueReusableCellWithIdentifier:MenuHeaderCellIdentifier];
     MenuHeader *menuHeader=(MenuHeader *)dic;
+    cell.menuHeader=menuHeader;
     if(MYLog()){
       NSLog(@"calling MenuHeader with %@", menuHeader.name);
     }
     
     cell.layer.borderWidth=2.0f;
     cell.layer.borderColor=[UIColor orangeColor].CGColor;
-    
+    //cell.menuHeader=menuHeader;
+    cell.nameLabel=nil;
     [cell updateCell:menuHeader];
     
     return cell;

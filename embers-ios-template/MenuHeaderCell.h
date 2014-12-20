@@ -11,7 +11,10 @@
 
 @interface MenuHeaderCell : UITableViewCell
 @property (nonatomic, assign) CGFloat height;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (nonatomic, strong) MenuHeader* menuHeader;
+//@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+
 -(void)updateCell:(MenuHeader *)menuHeader;
 
 @end

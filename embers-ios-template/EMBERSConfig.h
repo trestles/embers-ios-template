@@ -22,6 +22,8 @@ extern NSString *EMBERSHost();
 extern NSString *EMBERSImageHost();
 extern NSString *EMBERSLocationId();
 extern BOOL EMBERSShowBorders();
+extern BOOL EMBERSLog();
+
 extern BOOL MYLog();
 extern UIFont* MYMenuListFont(); // used in MenuListViewController
 

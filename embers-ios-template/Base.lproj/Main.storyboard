@@ -127,9 +127,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nameLabel" destination="ykB-Kf-cDf" id="HEu-tO-gek"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MHBottomDecoratorCell" id="gy9-D1-CRw" customClass="MHBottomDecoratorCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

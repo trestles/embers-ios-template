@@ -42,19 +42,29 @@
 
 -(void)initWithMenuHeader:(MenuHeader *)mh
 {
-  self.nameLabel.text=mh.name;
+
+  //self.nameLabel.text=mh.name;
 }
 
 -(void)updateCell:(MenuHeader *)menuHeader
 {
+  self.nameLabel=[[UILabel alloc] initWithFrame:CGRectMake(0.0f,0.0f, 200.0f, 30.0f)];
   _mhCellHeight=40;
   _mhTopPad=5.0f;
   _mhBottomPad=5.0f;
   
-  self.nameLabel.text=menuHeader.nameExt;
+  
+  //self.nameLabel.text=menuHeader.name;
+  //self.nameLabel.text=@"my thinking";
+
   self.nameLabel.font=MYMenuHeaderFont();
   self.nameLabel.numberOfLines=0;
   self.nameLabel.textAlignment = NSTextAlignmentCenter;
+  [self.nameLabel setBackgroundColor:[UIColor blueColor]];
+  self.nameLabel.text=menuHeader.nameExt;
+  if(EMBERSLog()){
+    NSLog(@"here is %@",menuHeader.nameExt);
+  }
   [self.nameLabel sizeToFit];
   if(EMBERSShowBorders()){
     self.nameLabel.layer.borderColor=[UIColor redColor].CGColor;
@@ -75,14 +85,16 @@
   CGFloat width = [UIScreen mainScreen].bounds.size.width;
   CGFloat leftOffset=(width-self.nameLabel.frame.size.width)/2;
   NSLog(@"here is the width: %f",width);
-  self.nameLabel.frame=CGRectMake(leftOffset, _mhTopPad , /* 280.0f */ self.nameLabel.frame.size.width ,self.nameLabel.frame.size.height);
-
+  
+  self.nameLabel.frame=CGRectMake(leftOffset, _mhTopPad , self.nameLabel.frame.size.width ,self.nameLabel.frame.size.height);
+  
   //self.nameLabel.frame=CGRectMake(20.0f, _mhTopPad , 280.0f,30.0f);
+  /*
   if(EMBERSShowBorders()){
     self.nameLabel.layer.borderColor=[UIColor greenColor].CGColor;
     self.nameLabel.layer.borderWidth=2.0f;
   }
-  
+  */
   self.height=self.nameLabel.frame.size.height + _mhTopPad;
   
   if(![menuHeader.topDecorator isEqualToString:@""]){
@@ -94,7 +106,8 @@
   }
   self.height+=5.0f;
   
-  NSLog(@"about to update menuHeader cell: %@", menuHeader.name);
+  [self.contentView addSubview:self.nameLabel];
+  //NSLog(@"about to update menuHeader cell: %@", menuHeader.name);
 }
 
 -(void)renderDecorator:(NSString *)decoratorValue
@@ -128,7 +141,9 @@
 - (void)prepareForReuse
 {
   
-  self.nameLabel.text = nil;
+  self.nameLabel = nil;
+  //[self.nameLabel removeFromSuperview];
+
   //self.detailLabel.text = nil;
   //self.spotView.subviews=nil;
   for (UIGestureRecognizer *recognizer in self.gestureRecognizers) {

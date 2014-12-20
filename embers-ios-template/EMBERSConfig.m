@@ -61,10 +61,14 @@ CGFloat MYLocationLongitude(){
   return -118.3818;
 }
 
-
-BOOL MYLog(){
+BOOL EMBERSLog(){
   return YES;
   //return NO;
+}
+
+BOOL MYLog(){
+  //return YES;
+  return NO;
 }
 
 NSString *EMBERSLocationID() {

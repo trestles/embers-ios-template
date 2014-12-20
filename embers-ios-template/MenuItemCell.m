@@ -49,7 +49,6 @@
 {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
 }
 
 -(UIView *)circleWithColor:(UIColor *)color radius:(int)radius {
@@ -98,7 +97,9 @@
   }
   
   if(![menuItem.miSeparator isEqualToString:@""]){
-    NSLog(@"this is not blank with %@", menuItem.miSeparator);
+    if(MYLog()){
+      NSLog(@"this is not blank with %@", menuItem.miSeparator);
+    }
     UILabel *miSeparator=[[UILabel alloc] initWithFrame:CGRectMake(0.0f, self.height, 200.0f, 0.0f)];
     miSeparator.text=menuItem.miSeparator;
     [miSeparator sizeToFit];
@@ -120,8 +121,9 @@
       UIView *tastingNoteDot=[self circleWithColor:[UIColor blackColor] radius:4];
       [self.spotView addSubview:tastingNoteDot];
       tastingNoteDot.frame=CGRectMake(tastingNoteDot.frame.origin.x, tastingNoteDot.frame.origin.y + 10.0f, tastingNoteDot.frame.size.width, tastingNoteDot.frame.size.height);
-      
-      NSLog(@"THIS ITEM %@ has tasting notes", menuItem.header);
+      if(MYLog()){
+        NSLog(@"THIS ITEM %@ has tasting notes", menuItem.header);
+      }
       UIView *tastingNote=[self circleWithColor:[UIColor blackColor] radius:4];
       tastingNote.frame=CGRectMake(tastingNote.frame.origin.x, tastingNote.frame.origin.y + 10.0f, tastingNote.frame.size.width, tastingNote.frame.size.height);
     }
@@ -145,10 +147,14 @@
     //self.detailLabel.frame=CGRectMake(_miHeaderDetailLeftPadding, self.headerLabel.frame.size.height + 10.0f + 5.0f, newContentWidth, 1000.0f);
     //NSLog(@"HEIGHT of Detail: %f",self.detailLabel.frame.size.height);
 
-    NSLog(@"HEIGHT of Detail: %f and self.headerLabel.frame.size.height: %f",self.detailLabel.frame.size.height, self.headerLabel.frame.size.height);
+    if(MYLog()){
+      NSLog(@"HEIGHT of Detail: %f and self.headerLabel.frame.size.height: %f",self.detailLabel.frame.size.height, self.headerLabel.frame.size.height);
+    }
 
     self.detailLabel.frame=CGRectMake(_miHeaderDetailLeftPadding, self.headerLabel.frame.size.height +  12.0f, _newContentWidth, self.detailLabel.frame.size.height);
-    NSLog(@"HEIGHT of Detail: %f",self.detailLabel.frame.size.height);
+    if(MYLog()){
+      NSLog(@"HEIGHT of Detail: %f",self.detailLabel.frame.size.height);
+    }
     if(EMBERSShowBorders()){
       self.detailLabel.layer.borderColor=[UIColor blueColor].CGColor;
       self.detailLabel.layer.borderWidth=2.0f;
@@ -169,7 +175,9 @@
 
 - (void)renderHeader:(NSString *)header
 {
-  NSLog(@"here is the header %@", header);
+  if(MYLog()){
+    NSLog(@"here is the header %@", header);
+  }
   self.headerLabel.numberOfLines=0;
   self.headerLabel.font=MYMainFont();
   
@@ -191,8 +199,9 @@
   if(_priceHeight>self.height){
     self.height=_priceHeight + 10.0f;
   }
-  
-  NSLog(@"HEIGHT AT BOTTOM  OF HEADER: %f for %@", self.height, header);
+  if(MYLog()){
+    NSLog(@"HEIGHT AT BOTTOM  OF HEADER: %f for %@", self.height, header);
+  }
 }
 
 
@@ -219,7 +228,9 @@
   size.height = ceilf(size.height);
   size.width = ceilf(size.width);
   
-  NSLog(@"values are %f or %f", size.height, size.width);
+  if(MYLog()){
+    NSLog(@"values are %f or %f", size.height, size.width);
+  }
   // Values are fractional -- you should take the ceilf to get equivalent values
   size.height = ceilf(size.height);
   size.width = ceilf(size.width);
@@ -229,7 +240,6 @@
   if ([price rangeOfString:[NSString stringWithFormat:@"%@",@"\n"]].location != NSNotFound)
   {
     //return YES;
-    NSLog(@"this value is found");
     self.priceLabel.frame=CGRectMake(20.0f, 20.0f, 300.0f, 5.0f);
 
     //NSLog(@"this value is not found");
@@ -240,7 +250,9 @@
     self.priceLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.priceLabel.numberOfLines=0;
     [self.priceLabel sizeToFit];
-    NSLog(@"the priceLabel width is: %f for %@", self.priceLabel.frame.size.width, price);
+    if(MYLog()){
+      NSLog(@"the priceLabel width is: %f for %@", self.priceLabel.frame.size.width, price);
+    }
     
     //self.priceLabel.frame.size.width
     //CGFloat leftSide=320.0f - self.priceLabel.frame.size.width - 20.0f;
@@ -264,7 +276,9 @@
       self.priceLabel.frame=CGRectMake(20.0f, 20.0f, 100.0f, 5.0f);
       self.priceLabel.numberOfLines=0;
       [self.priceLabel sizeToFit];
-      NSLog(@"the priceLabel width is: %f for %@", self.priceLabel.frame.size.width, price);
+      if(MYLog()){
+        NSLog(@"the priceLabel width is: %f for %@", self.priceLabel.frame.size.width, price);
+      }
       CGFloat tmpPriceWidth=_screenWidth - 120.0f;
       self.priceLabel.frame = CGRectMake(tmpPriceWidth, _miTopPad, self.priceLabel.frame.size.width, self.priceLabel.frame.size.height);
       //_newLeftOffset=200.0f;
@@ -287,7 +301,9 @@
   }
   }
   _priceHeight=self.priceLabel.frame.size.height;
-  NSLog(@"HEIGHT AT BOTTOM  OF PRICE: %f for price: %@", self.priceLabel.frame.size.height, price);
+  if(MYLog()){
+    NSLog(@"HEIGHT AT BOTTOM  OF PRICE: %f for price: %@", self.priceLabel.frame.size.height, price);
+  }
   
 }
 

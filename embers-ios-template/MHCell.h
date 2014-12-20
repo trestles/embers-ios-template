@@ -11,4 +11,9 @@
 @interface MHCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (nonatomic, assign) CGFloat height;
+
+//-(void)updateCell:(NSString *)val;
+//-(void)updateCell:(MenuItem *)menu_item;
+-(void)updateCell:(NSString *)val;
+
 @end

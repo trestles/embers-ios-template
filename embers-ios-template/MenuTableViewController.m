@@ -20,6 +20,7 @@
 #import "AFNetworking.h"
 #import "MHBottomDecoratorCell.h"
 #import "MHBottomDecoratorCell.h"
+#import "MHCell.h"
 
 @interface MenuTableViewController (){
   NSUInteger _menuItemID;
@@ -68,7 +69,8 @@
     [self.view addSubview:dismissButton];
   }
   
-  self.menuTV.frame=CGRectMake(0.0f, 44.0f, self.view.frame.size.width, self.view.frame.size.height-44.0f);
+  //self.menuTV.frame=CGRectMake(0.0f, 44.0f, self.view.frame.size.width, self.view.frame.size.height-44.0f);
+  self.menuTV.frame=CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height);
   
   //if(MYLog()){
     NSLog(@"calling viewDidLoad");
@@ -242,14 +244,16 @@
   }
   id dic=self.menu.listItems[indexPath.row];
   if([dic isKindOfClass:[MenuHeader class]]){
-    /*
-    MenuHeaderCell *mhCell=(MenuHeaderCell *)cell;
+    
+    MHCell *mhCell=(MHCell *)cell;
     if(MYLog()){
       NSLog(@"here i am with MenuHeaderCell.nameLabel height:  %f", mhCell.nameLabel.frame.size.height);
       NSLog(@"the mhCell height is %f", mhCell.height);
     }
-     */
-    return 70.0f;
+    
+    
+    //return 70.0f;
+    return mhCell.height;
   }else if([dic isKindOfClass:[MenuItem class]]){
     MenuItemCell *miCell=(MenuItemCell *)cell;
     return miCell.height;
@@ -271,15 +275,16 @@
 
   //static NSString *MenuHeaderCellIdentifier=@"MenuHeaderCell";
   static NSString *MenuHeaderCellIdentifier=@"MyTableViewCell";
-
- 
   static NSString *MenuItemCellIdentifier=@"MenuItemCell";
   static NSString *MHBottomDecoratorCellIdentifier=@"MHBottomDecoratorCell";
 
   id dic=self.menu.listItems[indexPath.row];
   if([dic isKindOfClass:[MenuHeader class]]){
-    MenuHeaderCell *cell = (MenuHeaderCell *)[self.menuTV dequeueReusableCellWithIdentifier:MenuHeaderCellIdentifier];
+    //MenuHeaderCell *cell = (MenuHeaderCell *)[self.menuTV dequeueReusableCellWithIdentifier:MenuHeaderCellIdentifier];
+    MHCell *cell = (MHCell *)[self.menuTV dequeueReusableCellWithIdentifier:MenuHeaderCellIdentifier];
+
     MenuHeader *menuHeader=(MenuHeader *)dic;
+
     //cell.menuHeader=menuHeader;
     if(MYLog()){
       NSLog(@"calling MenuHeader with %@", menuHeader.name);
@@ -287,7 +292,10 @@
     
     cell.layer.borderWidth=2.0f;
     cell.layer.borderColor=[UIColor orangeColor].CGColor;
-    cell.nameLabel.text=menuHeader.name;
+    //cell.nameLabel.text=menuHeader.name;
+    [cell updateCell:menuHeader.name];
+    //cell.updateCell:@"my thinking";
+    //cell.updateCell
     //cell.menuHeader=menuHeader;
     /*
     cell.nameLabel=nil;

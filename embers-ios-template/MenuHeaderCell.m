@@ -67,9 +67,22 @@
   
   //CGFloat leftOffset=((320.0f - self.nameLabel.frame.size.width) / 2 );
   //self.nameLabel.frame=CGRectMake(leftOffset, _mhTopPad , self.nameLabel.frame.size.width,self.nameLabel.frame.size.height);
-  self.nameLabel.frame=CGRectMake(20.0f, _mhTopPad , 280.0f,self.nameLabel.frame.size.height);
-  //self.nameLabel.frame=CGRectMake(20.0f, _mhTopPad , 280.0f,30.0f);
+  //self.nameLabel.frame=CGRectMake(20.0f, _mhTopPad , 280.0f,self.nameLabel.frame.size.height);
 
+  //self.nameLabel.frame=CGRectMake(20.0f, _mhTopPad , /* 280.0f */ self.contentView.frame.size.width - 40.0f ,self.nameLabel.frame.size.height);
+  
+  // left offset
+  CGFloat width = [UIScreen mainScreen].bounds.size.width;
+  CGFloat leftOffset=(width-self.nameLabel.frame.size.width)/2;
+  NSLog(@"here is the width: %f",width);
+  self.nameLabel.frame=CGRectMake(leftOffset, _mhTopPad , /* 280.0f */ self.nameLabel.frame.size.width ,self.nameLabel.frame.size.height);
+
+  //self.nameLabel.frame=CGRectMake(20.0f, _mhTopPad , 280.0f,30.0f);
+  if(MYShowBorders()){
+    self.nameLabel.layer.borderColor=[UIColor greenColor].CGColor;
+    self.nameLabel.layer.borderWidth=2.0f;
+  }
+  
   self.height=self.nameLabel.frame.size.height + _mhTopPad;
   
   if(![menuHeader.topDecorator isEqualToString:@""]){

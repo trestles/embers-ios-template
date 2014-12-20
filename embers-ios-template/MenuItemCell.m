@@ -23,6 +23,7 @@
   CGFloat _newLeftOffset;
   CGFloat _newContentWidth;
   CGFloat _priceHeight;
+  CGFloat _screenWidth;
 
 }
 
@@ -61,12 +62,15 @@
 
 -(void)updateCell:(MenuItem *)menuItem
 {
+  _screenWidth = [UIScreen mainScreen].bounds.size.width;
   _miTopPad=10.0f;
   _miBottomPad=10.0f;
   _miHeaderDetailLeftPadding=30.0f;
-  _miHeaderDetailWidth=230.0f;
+  //_miHeaderDetailWidth=230.0f;
+  _miHeaderDetailWidth=_screenWidth-90.0f; //
   _miAccentPositions=@"top";
-  _priceLeftPad=280.0f;
+  //_priceLeftPad=280.0f;
+  _priceLeftPad=_screenWidth-40.0f;
   _spotLeftPad=9.0f;
   
   [self renderPrice:menuItem.price];
@@ -239,7 +243,8 @@
     NSLog(@"the priceLabel width is: %f for %@", self.priceLabel.frame.size.width, price);
     
     //self.priceLabel.frame.size.width
-    CGFloat leftSide=320.0f - self.priceLabel.frame.size.width - 20.0f;
+    //CGFloat leftSide=320.0f - self.priceLabel.frame.size.width - 20.0f;
+    CGFloat leftSide=_screenWidth - self.priceLabel.frame.size.width - 20.0f;
     self.priceLabel.frame = CGRectMake(leftSide, _miTopPad, self.priceLabel.frame.size.width, self.priceLabel.frame.size.height);
     //_newLeftOffset=200.0f;
     _newContentWidth=320.0f - self.priceLabel.frame.size.width - 20.0f - 40.0f;
@@ -267,7 +272,9 @@
     self.priceLabel.text=price;
     [self.priceLabel sizeToFit];
     NSLog(@"here is the width in the not > 25.0 width: %f for %@ and _newLeftOffset: %f", self.priceLabel.frame.size.width, self.priceLabel.text, _newLeftOffset);
-    _newLeftOffset=290.0f-self.priceLabel.frame.size.width;
+    //_newLeftOffset=290.0f-self.priceLabel.frame.size.width;
+    _newLeftOffset=_screenWidth-30.0f-self.priceLabel.frame.size.width;
+
     self.priceLabel.frame = CGRectMake(_newLeftOffset, _miTopPad, self.priceLabel.frame.size.width, self.priceLabel.frame.size.height);
 
   

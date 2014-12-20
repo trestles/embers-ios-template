@@ -56,7 +56,7 @@
 
 - (void)viewDidLoad
 {
-  
+  NSLog(@"within viewDidLoad width: %f", self.view.frame.size.width);
   CGFloat _headerViewStart=0.0f;
   if(self.presentedAsModal){
     //_headerViewStart=350.0f;
@@ -68,6 +68,7 @@
     [self.view addSubview:dismissButton];
   }
   
+  self.menuTV.frame=CGRectMake(0.0f, 44.0f, self.view.frame.size.width, self.view.frame.size.height-44.0f);
   
   //if(MYLog()){
     NSLog(@"calling viewDidLoad");
@@ -110,7 +111,7 @@
   if(MYLog()){
     NSLog(@"about to show showImageTastingNoteHelp");
   }
-  UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 60.0f)];
+  UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.frame.size.width, 60.0f)];
   if(!self.presentedAsModal){
     CGFloat _rad=8.0f;
     CGFloat _runningHeaderY;
@@ -154,6 +155,10 @@
     [tnDotLabel sizeToFit];
     tnDotLabel.frame=CGRectMake(_left, _runningHeaderY, tnDotLabel.frame.size.width, tnDotLabel.frame.size.height);
     [headerView addSubview:tnDotLabel];
+    headerView.layer.borderColor=[UIColor blueColor].CGColor;
+    headerView.layer.borderWidth=2.0f;
+    
+  
   }
   return headerView;
 }
@@ -271,6 +276,10 @@
     if(MYLog()){
       NSLog(@"calling MenuHeader with %@", menuHeader.name);
     }
+    
+    cell.layer.borderWidth=2.0f;
+    cell.layer.borderColor=[UIColor orangeColor].CGColor;
+    
     [cell updateCell:menuHeader];
     
     return cell;

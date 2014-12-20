@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B28E1D61A462F8500B070C1 /* MHCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B28E1D51A462F8500B070C1 /* MHCell.m */; };
 		6B353CE11A44BC9000B5D930 /* EMBERSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353CE01A44BC9000B5D930 /* EMBERSConfig.m */; };
 		6B353CE41A44C50C00B5D930 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353CE31A44C50C00B5D930 /* Location.m */; };
 		6B353CE71A44C5D200B5D930 /* EmbersRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B353CE61A44C5D200B5D930 /* EmbersRecord.m */; };
@@ -69,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		153C1C532813166E886D648D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6B28E1D41A462F8500B070C1 /* MHCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCell.h; sourceTree = "<group>"; };
+		6B28E1D51A462F8500B070C1 /* MHCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCell.m; sourceTree = "<group>"; };
 		6B353CDF1A44BC7B00B5D930 /* EMBERSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBERSConfig.h; sourceTree = "<group>"; };
 		6B353CE01A44BC9000B5D930 /* EMBERSConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMBERSConfig.m; sourceTree = "<group>"; };
 		6B353CE21A44C50C00B5D930 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 		6BC81D8D1A4410D20042DA9A /* views */ = {
 			isa = PBXGroup;
 			children = (
+				6B28E1D41A462F8500B070C1 /* MHCell.h */,
+				6B28E1D51A462F8500B070C1 /* MHCell.m */,
 				6B6EE8681A4419E5004A58D9 /* MHBottomDecoratorCell.h */,
 				6B6EE8691A4419E5004A58D9 /* MHBottomDecoratorCell.m */,
 				6B6EE86A1A4419E5004A58D9 /* MenuHeaderView.h */,
@@ -521,6 +526,7 @@
 				6B6EE87F1A441A3B004A58D9 /* NSDictionary+Additions.m in Sources */,
 				6B353CE41A44C50C00B5D930 /* Location.m in Sources */,
 				6B6EE8601A4419D8004A58D9 /* TastingNote.m in Sources */,
+				6B28E1D61A462F8500B070C1 /* MHCell.m in Sources */,
 				6B6EE8771A4419E5004A58D9 /* MenuHeaderView.m in Sources */,
 				6B6EE84C1A4419C8004A58D9 /* MapViewController.m in Sources */,
 				6B6EE8611A4419D8004A58D9 /* MenuHeader.m in Sources */,

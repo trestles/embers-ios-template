@@ -175,7 +175,7 @@
 
       Menu *menu=[[Menu alloc] initWithAttributes:menuDict];
       self.menu=menu;
-      [self.menuTV reloadData];
+      //[self.menuTV reloadData];
     }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Problem accessing internet" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
       [alert show];
@@ -217,7 +217,7 @@
     Menu *menu=[[Menu alloc] initWithAttributes:tmpResult];
 
     self.menu=menu;
-    [self.menuTV reloadData];
+    //[self.menuTV reloadData];
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Problem accessing internet" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
     [alert show];
@@ -234,6 +234,7 @@
 
 - (CGFloat)   tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+  
   id cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
   if(MYLog()){
     NSLog(@"at top for heightForRowAtIndexIPath");
@@ -241,12 +242,14 @@
   }
   id dic=self.menu.listItems[indexPath.row];
   if([dic isKindOfClass:[MenuHeader class]]){
+    /*
     MenuHeaderCell *mhCell=(MenuHeaderCell *)cell;
     if(MYLog()){
       NSLog(@"here i am with MenuHeaderCell.nameLabel height:  %f", mhCell.nameLabel.frame.size.height);
       NSLog(@"the mhCell height is %f", mhCell.height);
     }
-    return mhCell.height;
+     */
+    return 70.0f;
   }else if([dic isKindOfClass:[MenuItem class]]){
     MenuItemCell *miCell=(MenuItemCell *)cell;
     return miCell.height;
@@ -257,7 +260,8 @@
   if(MYLog()){
     NSLog(@"at bottom for heightForRowAtIndexIPath");
   }
-  return 20.0f;
+  
+  return 50.0f;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -265,7 +269,10 @@
     NSLog(@"calling cellForRowAtIndexPath for %lu", (long)indexPath.row);
   }
 
-  static NSString *MenuHeaderCellIdentifier=@"MenuHeaderCell";
+  //static NSString *MenuHeaderCellIdentifier=@"MenuHeaderCell";
+  static NSString *MenuHeaderCellIdentifier=@"MyTableViewCell";
+
+ 
   static NSString *MenuItemCellIdentifier=@"MenuItemCell";
   static NSString *MHBottomDecoratorCellIdentifier=@"MHBottomDecoratorCell";
 
@@ -273,16 +280,19 @@
   if([dic isKindOfClass:[MenuHeader class]]){
     MenuHeaderCell *cell = (MenuHeaderCell *)[self.menuTV dequeueReusableCellWithIdentifier:MenuHeaderCellIdentifier];
     MenuHeader *menuHeader=(MenuHeader *)dic;
-    cell.menuHeader=menuHeader;
+    //cell.menuHeader=menuHeader;
     if(MYLog()){
       NSLog(@"calling MenuHeader with %@", menuHeader.name);
     }
     
     cell.layer.borderWidth=2.0f;
     cell.layer.borderColor=[UIColor orangeColor].CGColor;
+    cell.nameLabel.text=menuHeader.name;
     //cell.menuHeader=menuHeader;
+    /*
     cell.nameLabel=nil;
     [cell updateCell:menuHeader];
+     */
     
     return cell;
   }else if([dic isKindOfClass:[MenuItem class]]){
@@ -300,7 +310,7 @@
         NSLog(@"YOU HAVE NEITHER INSTORE_IMAGE or TASTING_NOTES %@", menuItem.header);
       }
     }
-    NSLog(@"MenuItemCell is a %@", NSStringFromClass([cell class]));
+    NSLog(@"MenuItemCell %i is a %@", menuItem.menuItemID, NSStringFromClass([cell class]));
     return cell;
   } else if([dic isKindOfClass:[NSDictionary class]]){
     MHBottomDecoratorCell *cell = [self.menuTV dequeueReusableCellWithIdentifier:MHBottomDecoratorCellIdentifier];

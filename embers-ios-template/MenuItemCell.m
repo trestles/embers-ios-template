@@ -234,7 +234,9 @@
   // Values are fractional -- you should take the ceilf to get equivalent values
   size.height = ceilf(size.height);
   size.width = ceilf(size.width);
-  NSLog(@"price width %f for %@", self.priceLabel.frame.size.width, self.priceLabel.text);
+  if(MYLog()){
+    NSLog(@"price width %f for %@", self.priceLabel.frame.size.width, self.priceLabel.text);
+  }
   
   
   if ([price rangeOfString:[NSString stringWithFormat:@"%@",@"\n"]].location != NSNotFound)
@@ -267,7 +269,9 @@
     
   }else{
     if(size.width > 25.0f){
-      NSLog(@"this value is not found");
+      if(MYLog()){
+        NSLog(@"this value is not found");
+      }
       //if(self.priceLabel.frame.size.width > 25.0f){
       _newLeftOffset=_priceLeftPad + 20.0f - self.priceLabel.frame.size.width;
       _newContentWidth=_miHeaderDetailWidth + 20.0f - self.priceLabel.frame.size.width;
@@ -291,7 +295,9 @@
     _newContentWidth=_miHeaderDetailWidth;
     self.priceLabel.text=price;
     [self.priceLabel sizeToFit];
-    NSLog(@"here is the width in the not > 25.0 width: %f for %@ and _newLeftOffset: %f", self.priceLabel.frame.size.width, self.priceLabel.text, _newLeftOffset);
+    if(MYLog()){
+      NSLog(@"here is the width in the not > 25.0 width: %f for %@ and _newLeftOffset: %f", self.priceLabel.frame.size.width, self.priceLabel.text, _newLeftOffset);
+    }
     //_newLeftOffset=290.0f-self.priceLabel.frame.size.width;
     _newLeftOffset=_screenWidth-30.0f-self.priceLabel.frame.size.width;
 

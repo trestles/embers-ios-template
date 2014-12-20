@@ -48,6 +48,7 @@
 
 -(void)updateCell:(MenuHeader *)menuHeader
 {
+  self.nameLabel=nil;
   self.nameLabel=[[UILabel alloc] initWithFrame:CGRectMake(0.0f,0.0f, 200.0f, 30.0f)];
   _mhCellHeight=40;
   _mhTopPad=5.0f;
@@ -61,9 +62,12 @@
   self.nameLabel.numberOfLines=0;
   self.nameLabel.textAlignment = NSTextAlignmentCenter;
   [self.nameLabel setBackgroundColor:[UIColor blueColor]];
-  self.nameLabel.text=menuHeader.nameExt;
+  self.nameLabel.text=@"";
+  self.nameLabel.text=menuHeader.name;
+  //self.nameLabel.text=@"some"; //menuHeader.name;
+
   if(EMBERSLog()){
-    NSLog(@"here is %@",menuHeader.nameExt);
+    NSLog(@"EMBERSLog: MENU_HEADER %@",menuHeader.nameExt);
   }
   [self.nameLabel sizeToFit];
   if(EMBERSShowBorders()){

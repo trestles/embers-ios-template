@@ -15,6 +15,7 @@
 @property (nonatomic, assign) int locationID;
 @property (nonatomic, strong) NSString *phoneNumber;
 @property (nonatomic, strong) NSString *street;
+@property (nonatomic, strong) NSString *state;
 @property (nonatomic, strong) NSString *city;
 @property (nonatomic, assign) double longitude;
 @property (nonatomic, assign) double latitude;

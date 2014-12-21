@@ -96,7 +96,10 @@
   UILabel *locationLabel=[[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 180.0f, 0.0f)];
 
   locationLabel.numberOfLines=0;
+  /*
   NSString *nameString=[NSString stringWithFormat:@"%@ \n%@ \n%@",EMBERSlocationName(), EMBERSlocationAddressShort(), EMBERSlocationAddressCity()];
+   */
+  NSString *nameString=[NSString stringWithFormat:@"%@ \n%@ \n%@",self.location.name, self.location.street, self.location.city];
   locationLabel.text=nameString;
   [locationLabel sizeToFit];
   [_locationView addSubview:locationLabel];

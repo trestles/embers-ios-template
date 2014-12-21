@@ -72,8 +72,8 @@ BOOL MYLog(){
 }
 
 NSString *EMBERSLocationID() {
-  return @"48";  // AOC
-  //return @"37";  // LUCQUES
+  //return @"48";  // AOC
+  return @"37";  // LUCQUES
 
 }
 

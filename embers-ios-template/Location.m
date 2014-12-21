@@ -36,6 +36,10 @@
   }
   self.locationID=[[attributes objectForKey:@"id"] integerValue];
   self.distance=[[attributes objectForKey:@"distance"] doubleValue];
+  self.city=[attributes objectForKey:@"city"];
+  self.state=[attributes objectForKey:@"state"];
+  self.street=[attributes objectForKey:@"street"];
+
   return self;
 }
 

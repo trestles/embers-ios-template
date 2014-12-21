@@ -116,6 +116,8 @@
      {
        if (image)
        {
+         _backgroundView.contentMode = UIViewContentModeScaleAspectFill;
+         _backgroundView.autoresizingMask =   UIViewAutoresizingFlexibleHeight;
          _backgroundView.image=image;
          _backgroundView.frame=CGRectMake(0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height);
          [UIView animateWithDuration:1.0
@@ -205,10 +207,11 @@
     
     _location=[[Location alloc]initWithAttributes:result];
     
+    /*
     NSLog(@"HERE is the _location name: %@", _location.name);
     NSLog(@"HERE is the _location latitude: %f", _location.latitude);
     NSLog(@"HERE is the _location longitude: %f", _location.longitude);
-    
+    */
     /*
     _buttonsView.layer.borderColor=[UIColor orangeColor].CGColor;
     _buttonsView.layer.borderWidth=2.0f;

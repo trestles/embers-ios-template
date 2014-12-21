@@ -55,7 +55,6 @@
 
   AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
   manager.responseSerializer = [AFJSONResponseSerializer serializer];
-  //manager.responseSerializer = [AFHTTPResponseSerializer serializer];
   manager.requestSerializer = [AFJSONRequestSerializer serializer];
 //  [manager.requestSerializer setValue:[credentialStore authToken] forHTTPHeaderField:@"X-auth_token"];
   NSString *arcURL = [NSString stringWithFormat:@"%@/arc/v1/api/locations/%i/mobile_home",EMBERSHost(), locationID];

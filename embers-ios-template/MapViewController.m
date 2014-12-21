@@ -110,7 +110,7 @@
   
   UITextView *locationTextView=[[UITextView alloc] initWithFrame:CGRectMake(10.0f, _phoneOffset, 180.0f, 0.0f)];
   locationTextView.font=EMBERSMapMiniViewFont();
-  locationTextView.text=@"(310) 859-9859";
+  locationTextView.text=self.location.phoneNumber;
   locationTextView.editable = NO;
   [locationTextView sizeToFit];
   //locationTextView.backgroundColor=[UIColor greenColor];

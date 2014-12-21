@@ -39,7 +39,7 @@
   self.city=[attributes objectForKey:@"city"];
   self.state=[attributes objectForKey:@"state"];
   self.street=[attributes objectForKey:@"street"];
-
+  self.phoneNumber=[attributes objectForKey:@"phone"];
   return self;
 }
 
